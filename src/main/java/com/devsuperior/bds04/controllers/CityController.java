@@ -31,7 +31,7 @@ public class CityController {
 	}
 	
 	@PostMapping
-	public ResponseEntity<CityDTO> insertl(@Valid @RequestBody CityDTO dto) {
+	public ResponseEntity<CityDTO> insert(@Valid @RequestBody CityDTO dto) {
 		dto = service.insert(dto);
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(dto.getId()).toUri();
 		return ResponseEntity.created(uri).body(dto);

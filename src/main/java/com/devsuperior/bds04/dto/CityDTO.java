@@ -22,6 +22,10 @@ public class CityDTO implements Serializable {
 		this.name = name;
 	}
 	
+	public CityDTO(String name) {
+		this.name = name;
+	}
+	
 	public CityDTO(City entity) {
 		id = entity.getId();
 		name = entity.getName();
